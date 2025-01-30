@@ -5,40 +5,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Influencer Gear</title>
-    <link rel="stylesheet" href="style/index.css">
+    <!-- daisy ui and tailwindcss -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/146cca6ef2.js" crossorigin="anonymous"></script>
+    <!-- google font-poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-poppins {
+            font-family: "Poppins", serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'color-red': '#E02C6D',
+                        'background-gray': 'rgb(170, 170, 170)',
+                        'description': '#707070',
+                        'f-description': '#CFCFCF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
 
-<body class="work-sans-font">
-    <header>
-        <!-- https://github.com/giash459/influencer-gear -->
-        <nav class="navbar">
-            <div class="nav-title">Influencer products</div>
-            <div>
-                <ul class="nav-links">
-                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Sign up</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Log In</a></li>
+<body class="font-poppins">
+    <!-- https://v3.tailwindcss.com/  -->
+    <!-- https://github.com/giash459/influencer-gear -->
+    <!-- header section -->
+    <header class="w-9/12 mx-auto">
+        <!-- navbar section -->
+        <div class="navbar my-5">
+            <div class="flex-1">
+                <h3 class="text-lg lg:text-2xl font-bold">Influencer products</h3>
+            </div>
+            <div class="flex-none">
+                <div class="flex flex-col md:flex-row items-center font-semibold gap-5">
+                    <a>Home</a>
+                    <a>Products</a>
+                    <a>Sign up</a>
+                    <a>Log In</a>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
-                </ul>
-            </div>
-        </nav>
-        <div class="banner">
-            <div class="banner-content">
-                <h1 class="banner-title">Start your Journey as <br> Influencer</h1>
-                <p class="banner-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem <br> vestibulum sed scelerisque eros. Lectus faucibus.</p>
-                <div>
-                    <button class="btn-primary">Preebook now <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span> </button>
                 </div>
+                <!-- <button class="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-5 w-5 stroke-current">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+                </svg>
+              </button> -->
             </div>
-            <div class="img-content">
-                <img class="banner-img" src="images/main-camera.png" alt="">
+        </div>
+        <!-- banner section -->
+        <div class="">
+            <div class="hero border border-red-800">
+                <div class="hero-content gap-10  flex-col lg:flex-row-reverse">
+                    <div class="">
+                        <img class="" src="images/main-camera.png" />
+                    </div>
+                    <div class="">
+                        <h1 class="text-5xl font-bold">Start your Journey as <br> Influencer</h1>
+                        <p class="py-6 font-semibold">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem vestibulum sed scelerisque eros. Lectus faucibus.
+                        </p>
+                        <button class="btn bg-color-red text-white rounded-3xl">Preebook now <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <!-- main section -->
+     <main class="w-9/12 mx-auto">
+        <!-- picture section -->
+         <div class="flex flex-col lg:flex-row gap-5 my-12 justify-between">
+            <img src="logos/Alibaba.svg" alt="">
+            <img src="logos/Amazon.svg" alt="">
+            <img src="logos/Daraz.pk Logo.svg" alt="">
+            <img src="logos/Ebay.svg" alt="">
+            <img src="logos/Rakuten.svg" alt="">
+            <img src="logos/Walmart.svg" alt="">
+            <img src="logos/Target.svg" alt="">
+         </div>
+         <!-- popular collection section -->
+          <section class="my-24">
+            <h2 class="text-3xl font-semibold text-center mb-8">Popular Collection</h2>
+            <!-- card container -->
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- card 1 -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class=" pt-5">
+                      <img
+                        src="images/tripod.png"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body px-10">
+                      <h2 class="card-title">Flex Tripod</h2>
+                      <p>$50.48</p>
+                      <p>Wordwide shifting available <br>
+                        Buyers protection possible!</p>
+                    </div>
+                  </div>
+                <!-- card 2 -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class=" pt-5">
+                      <img
+                        src="images/mic.png"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body px-10">
+                      <h2 class="card-title">microphone</h2>
+                      <p>$120.25</p>
+                      <p>Wordwide shifting available <br>
+                        Buyers protection possible!</p>
+                    </div>
+                  </div>
+                <!-- card 3 -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class=" pt-5">
+                      <img
+                        src="images/airpod.png"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body px-10">
+                      <h2 class="card-title">Airbuds</h2>
+                      <p>$100.00</p>
+                      <p>Wordwide shifting available <br>
+                        Buyers protection possible!</p>
+                    </div>
+                  </div>
+                <!-- card 4 -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class=" pt-5">
+                      <img
+                        src="images/drone.png"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body px-10">
+                      <h2 class="card-title">Drone</h2>
+                      <p>$980.25</p>
+                      <p>Wordwide shifting available <br>
+                        Buyers protection possible!</p>
+                    </div>
+                  </div>
+                <!-- card 5 -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class=" pt-5">
+                      <img
+                        src="images/lights.png"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body px-10">
+                      <h2 class="card-title">Light Setup</h2>
+                      <p>$1200.00</p>
+                      <p>Wordwide shifting available <br>
+                        Buyers protection possible!</p>
+                    </div>
+                  </div>
+                <!-- card 6 -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class=" pt-5">
+                      <img
+                        src="images/setup.png"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body px-10">
+                      <h2 class="card-title">Photoshoot set</h2>
+                      <p>$820.40</p>
+                      <p>Wordwide shifting available <br>
+                        Buyers protection possible!</p>
+                    </div>
+                  </div>
+             </div>
+          </section>
+     </main>
 </body>
 
 </html>
